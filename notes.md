@@ -28,7 +28,7 @@ Instalamos **djangorestframework**
 pip install djangorestframework
 ````
 
-Iniciamos el projecto de django
+Iniciamos el proyecto de django
 * Usamos el flag . para que cree el proyecto en la carpeta actual.
 
 ````
@@ -41,4 +41,27 @@ Ejecutamos manage.py para iniciar el servidor
 
 ````bash
 python manage.py runserver
+````
+
+Creamos una aplicación dentro de django
+
+````bash
+python manage.py startapp appName
+````
+
+Agregamos la aplicación y el módulo rest_framework en el archivo settings.py en la carpeta del proyecto django.
+
+````python
+# Application definition
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'appName',
+    'rest_framework'
+]
 ````
